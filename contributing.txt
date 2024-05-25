@@ -1,0 +1,66 @@
+--[[pod_format="raw",created="2024-05-24 11:33:38",modified="2024-05-24 11:52:39",revision=11]]
+-==================================================-
+						CODE STANDARDS
+-==================================================-
+
+** Naming things **
+
+VARIABLE 		is a constant (must not be edited)
+_variable 	is a global variable
+variable 		is a standard variable (must be "local")
+
+** Adding things **
+
+/main.lua			is the unmovable entry point
+/src				is for all the code
+	/state			is for state files
+	/character	is for characters files
+	
+
+-==================================================-
+				  PROGRAMMING PATTERNS
+-==================================================-
+
+** States **
+
+All the code must be encapsulated in "states".
+
+Each "state" is nearly a screen in the game:
+
+	- Main menu
+	- Options
+	- Character selection
+	- In game
+	- ...
+	
+All the necessary variables to make the state running
+have to be declared in the state:
+
+my_state = {
+	foo = "bar", -- Foo is used in this screen
+}
+
+All the states must have init, draw and update
+functions:
+
+function my_state:init(options)
+	-- Things to do when we need to initialize the
+	-- state, using options.
+end
+
+function my_state:draw()
+	-- The code we want to run in the Picotron _draw
+	-- function.
+end
+
+function my_state:update()
+	-- The code we want to run in the Picotron _update
+	-- function.
+end
+
+To change the current state, simply assign the new
+state to the "_state" global variable.
+
+Keep in mind that changing the state will pick up
+where it left off until you manually call the "init"
+function.

@@ -1,0 +1,37 @@
+--[[pod_format="raw",created="2024-05-24 08:39:04",modified="2024-05-24 08:49:22",revision=21]]
+** Basic game engine **
+
+- Menu
+	- [ ] Add a title screen
+	- [ ] Dircetly jump to game by pressing a button
+- In game
+	- [ ] Display simple version of the board
+	- Falling gems
+		- [ ] Generate falling gems
+		- [ ] Display the falling gems
+		- [ ] Handle the falling gems rotation	
+		- [ ] Handle the falling gems movement
+		- [ ] Handle the falling gems collisions
+		- [ ] Handle the falling gems final position
+		- [ ] Handle the crasher gem
+	- [ ] Add scoring
+	- [ ] Handle the end of the game (gems reach the top)
+
+
+** Things to do later **
+
+- Menu
+  	- [ ] Select difficulty
+- In game
+	- Characters
+		- [ ] Add characters on the side of the board
+		- [ ] Animate characters depending on the game
+	- [ ] Animate crashers
+	- [ ] Visualy group gems of the same color on the board
+	- [ ] Reflects effect on the gems
+	- [ ] Gems explosions
+	- [ ] Counter blocks
+	- [ ] P vs P
+- Net
+	- Local network play (using IP?)
+	- Online play (write a server? leaderboard?)
